@@ -1,0 +1,272 @@
+/* -------------------------- */
+/* ESTILOS GERAIS E LAYOUT    */
+/* -------------------------- */
+body {
+    background-color: #1a1a1a; /* Fundo escuro */
+    color: #f0f0f0; /* Texto claro */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #00bcd4; /* Cor ciano para links */
+    text-decoration: none;
+}
+
+/* -------------------------- */
+/* CABEÇALHO E NAVEGAÇÃO      */
+/* -------------------------- */
+.main-header {
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #ff9800; /* Linha laranja abaixo do header */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: #f0f0f0;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #00bcd4; /* Efeito hover ciano */
+}
+
+/* -------------------------- */
+/* SEÇÕES PRINCIPAIS          */
+/* -------------------------- */
+.hero-banner {
+    background-color: #1a1a1a;
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 3px solid #ff9800; /* Linha laranja de separação */
+}
+
+.banner-title {
+    color: #00bcd4; /* Título principal ciano */
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.banner-text {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 15px;
+}
+
+.content-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.content-section h3 {
+    color: #ff9800; /* Títulos de seção laranja */
+    font-size: 1.8em;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 2px solid #ff9800;
+}
+
+/* -------------------------- */
+/* GRID DE APLICAÇÕES (2 COLUNAS MAIORES) */
+/* -------------------------- */
+.grid-aplicacoes {
+    /* Layout de 2 colunas para manter os cards largos */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; /* Espaçamento confortável */
+    margin: 40px 0;
+    justify-content: center;
+    text-align: left;
+}
+
+.aplicacao-item {
+    background-color: #2c2c2c;
+    padding: 20px; /* Padding maior */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.aplicacao-item img {
+    width: 100%;
+    /* Altura maior, como no design original */
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.aplicacao-item h4 {
+    color: #00bcd4;
+    font-size: 1.2em; /* Fonte maior */
+    margin-top: 0;
+}
+
+.aplicacao-item p {
+    font-size: 1.05em; /* Texto maior */
+}
+
+/* -------------------------- */
+/* CORREÇÃO DE IMAGEM QUEBRADA */
+/* -------------------------- */
+/* Esta regra garante uma mensagem de erro clara se a imagem não carregar. */
+.aplicacao-item img[alt]:before {
+    content: "ERRO: Imagem não carregada. Verifique o caminho/extensão.";
+    display: block;
+    color: red;
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    line-height: 230px; /* Alinha o texto no centro verticalmente */
+    height: 250px; /* Altura ajustada para o novo tamanho do card */
+    border-radius: 8px;
+    font-style: italic;
+    font-size: 0.9rem;
+    position: absolute; 
+    width: calc(100% - 40px);
+}
+
+/* ------------------------------------- */
+/* CONTEÚDO DETALHADO: CARREIRA E IMPACTO*/
+/* ------------------------------------- */
+.detailed-content {
+    background-color: #242424; /* Fundo levemente diferente */
+    border-top: 1px solid #333;
+}
+
+.section-title {
+    color: #ff9800; /* Laranja */
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    display: inline-block;
+    border-bottom: 3px solid #ff9800;
+    padding-bottom: 5px;
+}
+
+.career-block {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.subsection-title {
+    color: #00bcd4; /* Ciano */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.career-block p {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+}
+
+.career-block strong {
+    color: #ff9800;
+    font-weight: 700;
+}
+
+/* Estilo para a imagem e a separação em linha */
+.image-separator {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-separator img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain; /* Garante que a imagem caiba inteira */
+    border: 1px solid #333;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #ff9800; /* Linha horizontal laranja */
+    margin: 50px auto;
+    width: 50%;
+}
+
+
+/* -------------------------- */
+/* RODAPÉ (Footer)            */
+/* -------------------------- */
+.main-footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid #333;
+}
+
+
+/* -------------------------- */
+/* RESPONSIVIDADE             */
+/* -------------------------- */
+@media (max-width: 992px) {
+    /* Telas grandes e médias usam 2 colunas */
+    .grid-aplicacoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Telas pequenas/mobile: 1 coluna */
+    .grid-aplicacoes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .main-header .container {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        margin-top: 15px;
+    }
+
+    .main-nav li {
+        margin: 0 10px;
+    }
+}
